@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Card
@@ -54,10 +55,11 @@ fun HomeScreen()
                         Image(
                             contentDescription = country.name,
                             modifier = Modifier.size(64.dp),
-                            contentScale = ContentScale.Crop,
+                            //contentScale = ContentScale.Crop,
+
                             painter = rememberAsyncImagePainter(country.imageUrl)
                         )
-                        Spacer(modifier = Modifier.height(8.dp))
+                        Spacer(modifier = Modifier.width(12.dp))
                         Column{
                             Text(text = country.name, style = MaterialTheme.typography.titleMedium)
                             Text(text = "Ranking FIFA: ${country.ranking}")
